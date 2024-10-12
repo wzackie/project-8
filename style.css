@@ -1,0 +1,225 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--gray);
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --gray:#5f5f79;
+    --pink:#c36cbb;
+}
+.image{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    position: relative;
+    z-index:-1;
+    translate:0 0px;
+}
+.image img{
+    width:42vw;
+    opacity:0.4;
+    z-index:1;
+}
+.image .big-circle{
+    display: flex;
+    justify-content: right;
+    z-index:0.5;
+}
+.image .medium-circle{
+    display: flex;
+    justify-content: center;
+    translate:400px 100px;
+    position: absolute;
+}
+.image .small-circle{
+    display: flex;
+    justify-content:left;
+    translate:200px 330px;
+    position: absolute;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+nav .logo{
+    display: flex;
+}
+nav .logo img{
+    width:25%;
+}
+nav .cart img{
+    width:50%;
+}
+nav .centre ul{
+    margin-top:10px;
+    display: flex;
+    width:500px;
+    justify-content: space-between;
+}
+nav .centre ul li{
+    list-style: none;
+}
+nav .centre ul li a{
+    font-size:18px;
+}
+nav .cart {
+    display: flex;
+}
+nav .logo p ,nav .cart p{
+    font-size:18px;
+	margin: 5px;
+}
+.parent{
+    position: relative;
+    z-index:1;
+}
+.container{
+    width:100%;
+    display: flex;
+    height:90vh;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+.container .left{
+    width:40%;
+}
+.container .left h1{
+    font-size: 44px;
+	font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f89);
+	-webkit-background-clip: text;
+    /* الخلفيه ع قد النص */
+	-webkit-text-fill-color: transparent;
+    /* لون النص شفاف */
+}
+.container .left p{
+    margin-top: 5px;
+	font-size: 22px;
+}
+.container .left a button{
+    margin:18px;
+    margin-top:80px;
+    margin-left:0;
+}
+.container .left a .one{
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+    border:2px solid var(--pink);
+    background-color: #fff;
+    color: var(--pink);
+}
+.container .left a .one:hover{
+    border:5px double var(--pink);
+}
+.container .left a .two{
+    width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 16px;
+    background-color:var(--pink);
+    border:2px solid var(--pink);
+    color:#fff;
+}
+.container .left a .two:hover{
+    border:5px double #fff;
+}
+.right img {
+    width:550px;
+    height:100%;
+    filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+}
+@keyframes drop {
+    /* هيكون شفاف جدا لما يكون فوق */
+	0% {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+    /* هيظهر اول لما يوصل مكانه */
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.points{
+    font-size:20px;
+    translate:170px 0;
+    position: absolute;
+}
+.points i{
+    padding:0 10px;
+    color: #c36cbb;
+}
+/* ///////////////////////////////////////// */
+@media(max-width:900px){
+    nav{
+        display: flex;
+    }
+    nav .logo{
+        display: flex;
+        flex-direction: column;
+        margin-top:5px;
+    }
+    nav .logo img{
+        margin-left:35%;
+    }
+    nav .centre ul{
+        width:280px;
+        justify-content:space-between;
+    }
+    nav .cart {
+        display: flex;
+        flex-direction: column;
+        margin-top:5px;
+    }
+    nav .cart img{
+        margin-left:30%;
+    }
+    .container{
+        margin-top:50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container .left{
+        width:100%;
+        align-items: center;
+    }
+    .container .left h1{
+        display: flex;
+        justify-content: center;
+    }
+    .container .left p{
+        text-align:center;
+    }
+    .container .left .a{
+        margin-left:25%;
+    }
+    .right img {
+        width:480px;
+    }
+
+/* ///////////////////////// */
+
+.image img{
+    width:50vw;
+}
+.image .medium-circle{
+    translate:-50px 0px;
+}
+.image .small-circle{
+    translate:-50px 20px;
+}
+
+}
